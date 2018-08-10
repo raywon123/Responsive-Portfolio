@@ -14,15 +14,12 @@ body {
 
 .container {
   width: 100%;
-  max-width: 960px;
+  max-width: 640px;
   margin: 0 auto;
   clear: both;
 }
 
-h1,
-h2,
-h3,
-p {
+h1, h2, h3, p {
   margin-bottom: 20px;
 }
 
@@ -30,9 +27,7 @@ p:last-child {
   margin-bottom: 0;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: 700;
   color: #4aaaa5;
@@ -45,16 +40,15 @@ h1 {
   border-bottom: 3px solid #ddd;
 }
 
-h2,
-h3 {
+h2, h3 {
   font-size: 22px;
 }
 
 /* header */
 
-#masthead {
-  position: fixed;
-  z-index: 99;
+.masthead {
+  /* position: fixed; 
+  z-index: 99; */
   width: 100%;
   margin: 0 0 30px;
   overflow: auto;
@@ -63,9 +57,9 @@ h3 {
   border-bottom: 2px solid #ccc;
 }
 
-#logo {
+.logo {
   float: left;
-  width: 250px;
+  width: 640px;
   height: 90px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
@@ -78,13 +72,14 @@ h3 {
 }
 
 nav {
-  float: right;
-  margin-top: 25px;
+  text-align: center;
 }
 
 nav a {
   display: inline-block;
   padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-left: 15px;
   line-height: 18px;
   color: #999;
@@ -119,15 +114,15 @@ h3, h2 {
 
 /* main */
 
-#main-container {
-  padding-top: 130px;
+.main-container {
+  padding-top: 20px;
   min-height: calc(100vh - 70px);
 }
 
 .main-section {
   float: left;
   width: 100%;
-  max-width: 960px;
+  max-width: 640px;
   padding: 30px;
   margin: 0 0 40px;
   background: #fff;
@@ -139,7 +134,7 @@ h3, h2 {
 .work {
   position: relative;
   float: left;
-  width: 274px;
+  width: 640px;
   margin: 20px 0 25px;
   overflow: auto;
 }
@@ -149,7 +144,7 @@ h3, h2 {
 }
 
 .work img {
-  width: 100%;
+  width: 90%;
   border: 0 none;
   opacity: 0.8;
 }
@@ -157,7 +152,7 @@ h3, h2 {
 .work h3 {
   position: absolute;
   bottom: 20px;
-  width: 100%;
+  width: 90%;
   padding: 15px;
   margin-bottom: 0;
   font-weight: 300;
@@ -170,33 +165,29 @@ h3, h2 {
 
 .auth-image {
   float: left;
-  width: 200px;
+  width: 580px;
   height: auto;
   margin-top: 10px;
+  margin-bottom: 25px;
   margin-right: 25px;
 }
 
 /* contact page */
 
-#contact-form ul {
+.contact-form ul {
   margin-bottom: 20px;
 }
 
-#contact-form li {
+.contact-form li {
   margin-bottom: 10px;
 }
 
-label,
-input[type=text],
-input[type=email],
-textarea {
+label, input[type=text], input[type=email], textarea {
   display: block;
   width: 100%;
 }
 
-input[type=text],
-input[type=email],
-textarea {
+input[type=text], input[type=email], textarea {
   height: 35px;
   padding: 0 10px;
   font-size: 14px;
@@ -214,4 +205,89 @@ input[type=submit] {
   cursor: pointer;
   background: #4aaaa5;
   border: 0 none;
+}
+
+/* iphone5 etc */
+
+/*
+@media only screen and (max-width: 320px) {
+
+}
+
+@media only screen and (min-width: 320px) {
+
+}
+
+@media only screen and (min-width: 375px) {
+
+}
+
+@media only screen and (min-width: 414px) {
+
+}
+*/
+
+/* start from here */
+
+@media only screen and (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+  .main-section {
+    max-width: 640px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .main-section {
+    max-width: 768px;
+  }
+  .logo {
+    width: 256px;
+  }
+  nav {
+    float: right;
+  }
+  nav a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .auth-image {
+    width: 300px;
+  }
+  .work {
+    width: 270px;
+  }
+  .work img {
+    width: 100%;
+  }
+  .work h3 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .container {
+    max-width: 980px;
+  }
+  .main-section {
+    max-width: 700px;
+  }
+  .main-container {
+    float: left;
+    margin-left: 30px;
+    max-width: 700px;
+  }
+  .work {
+    width: 270px;
+  }
+  .work img {
+    width: 100%;
+  }
+  .work h3 {
+    width: 100%;
+  }
 }
